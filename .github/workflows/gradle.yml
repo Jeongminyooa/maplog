@@ -28,7 +28,9 @@ jobs:
           cd ./src/main
           
           # application.yaml 파일 생성
-          touch ./resources/application.yaml
+          mkdir resources
+          cd ./resources
+          touch ./application.yaml
           
           # GitHub-Actions 에서 설정한 값을 application.yaml 파일에 쓰기
           echo "${{ secrets.DATABASE }}" >> ./application.yaml
