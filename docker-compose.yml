@@ -1,14 +1,18 @@
-version: "3"
+version: '3'
 services:
+
   web:
-    image: nginx
-    ports:
-      - 80:80
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-    depends_on:
-      - spring
-  spring:
-    build: .
+    container_name: web
+    image: jeongminyoo/maplog
+    expose:
+      - 8080
     ports:
       - 8080:8080
+
+  nginx:
+    container_name: nginx
+    image: jeongminyoo/maplog
+    ports:
+      - 80:80
+    depends_on:
+      - web
