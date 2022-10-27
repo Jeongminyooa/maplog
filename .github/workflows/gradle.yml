@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'temurin'
+          distribution: 'jeongmin'
 
       ## create application-database.yaml
       - name: make application.yaml
@@ -57,7 +57,7 @@ jobs:
           key: ${{ secrets.KEY }}
           script: |
             sudo docker rm -f $(docker ps -qa)
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/second-eyes-web
-            sudo docker pull ${{ secrets.DOCKER_REPO }}/second-eyes-nginx
+            sudo docker pull ${{ secrets.DOCKER_REPO }}/maplog-web
+            sudo docker pull ${{ secrets.DOCKER_REPO }}/maplog-nginx
             docker-compose up -d
             docker image prune -f
