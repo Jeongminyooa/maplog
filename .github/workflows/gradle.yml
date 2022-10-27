@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '11'
-          distribution: 'jeongmin'
+          distribution: 'temurin'
 
       ## create application-database.yaml
       - name: make application.yaml
