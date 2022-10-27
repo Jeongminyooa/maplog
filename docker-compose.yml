@@ -3,7 +3,7 @@ services:
 
   web:
     container_name: web
-    image: jeongminyoo/maplog
+    image: jeongminyoo/maplog-web
     expose:
       - 8080
     ports:
@@ -11,7 +11,7 @@ services:
 
   nginx:
     container_name: nginx
-    image: jeongminyoo/maplog
+    image: jeongminyoo/maplog-nginx
     ports:
       - 80:80
     depends_on:
