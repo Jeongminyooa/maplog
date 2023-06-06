@@ -1,5 +1,6 @@
 ### properties
 application-db.yml
+application-auth.yml
 
 ### Java template
 # Compiled class file
@@ -77,6 +78,7 @@ cmake-build-*/
 
 # IntelliJ
 out/
+.idea
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
