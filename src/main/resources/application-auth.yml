@@ -1,3 +1,0 @@
-jwt.header=Authorization
-jwt.secret=
-jwt.token-validity-in-seconds=86400
